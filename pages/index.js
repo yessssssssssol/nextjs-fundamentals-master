@@ -49,7 +49,7 @@ export default function Home({ results }) {
 }
 
 export async function getServerSideProps() {
-  const { results } = await (await fetch(`http://localhost:3001/api/movies`)).json(); // 번호 수정해서 사용
+  const { results } = await (await fetch(`https://nextjs-fundamentals-master.vercel.app/api/movies`)).json(); // 번호 수정해서 사용
   return {
     props: {
       results,
